@@ -1,4 +1,4 @@
-package com.dogukan.drinkwaterreminder
+package com.dogukan.onboardingScreen
 
 import org.junit.Test
 

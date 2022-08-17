@@ -1,4 +1,4 @@
-package com.dogukan.drinkwaterreminder.data
+package com.dogukan.onboardingScreen.data
 
 data class OnBoardingData(
     val image : Int,

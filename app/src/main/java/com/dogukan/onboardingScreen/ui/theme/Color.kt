@@ -1,4 +1,4 @@
-package com.dogukan.drinkwaterreminder.ui.theme
+package com.dogukan.onboardingScreen.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

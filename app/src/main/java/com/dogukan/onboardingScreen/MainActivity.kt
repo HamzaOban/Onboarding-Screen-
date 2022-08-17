@@ -1,4 +1,4 @@
-package com.dogukan.drinkwaterreminder
+package com.dogukan.onboardingScreen
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,16 +19,15 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.BlendMode.Companion.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
-import com.dogukan.drinkwaterreminder.data.OnBoardingData
-import com.dogukan.drinkwaterreminder.ui.theme.*
+import com.dogukan.onboardingScreen.data.OnBoardingData
+import com.dogukan.onboardingScreen.ui.theme.*
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
@@ -48,30 +47,20 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     items.add(OnBoardingData(
-                        R.drawable.water,
-                        "Hello, I am a reminder to drink water",
-                        "Getting enough water every day is important for your health. Drinking water can prevent dehydration, a condition that can cause unclear thinking, result in mood change, cause your body to overheat, and lead to constipation and kidney stones."
+                        R.drawable.a,
+                        "Hi, I'm Hamza",
+                        " I'm currently developing mobile applications with Android Studio."
                     ))
                     items.add(OnBoardingData(
-                        R.drawable.water,
-                        "Selam",
-                        "sa"
+                        R.drawable.a,
+                        "Career",
+                        "I want to continue my software career in\n" +
+                                "an environment where I can take myself\n" +
+                                "to the next level in the field of mobile\n" +
+                                "development.\n"
                     ))
-                    items.add(OnBoardingData(
-                        R.drawable.water,
-                        "Selam",
-                        "sa"
-                    ))
-                    items.add(OnBoardingData(
-                        R.drawable.water,
-                        "Selam",
-                        "sa"
-                    ))
-                    items.add(OnBoardingData(
-                        R.drawable.water,
-                        "Selam",
-                        "sa"
-                    ))
+
+
 
                     val pagerState = rememberPagerState(
                         pageCount = items.size,
@@ -111,6 +100,8 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.padding(top = 50.dp),
                             color = androidx.compose.ui.graphics.Color.White,
                             style = Typography.body1,
+                            fontSize = 30.sp,
+                            fontFamily = FontFamily.Default
                         )
                         Text(text = item[page].description,
                             modifier = Modifier.padding(top = 30.dp, start = 20.dp, end = 20.dp),
